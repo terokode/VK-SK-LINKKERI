@@ -34,8 +34,11 @@ function makeLink(&$atts, &$urlPattern, &$linkPattern){
     $att = shortcode_atts(array('nro' => false), $atts);
 
     if (preg_match('/^[0-9]{1,3}[a-b]?$/', $att['nro'])){
-        $url = sprintf($urlPattern, $att['nro'],
-                (in_array(substr($att['nro'], -1),array('a','b')) ? substr($att['nro'], -1) : '')
+        $url = sprintf( $urlPattern, $att['nro'],
+                        (
+                            in_array(substr($att['nro'], -1),array('a','b')) ?
+                            substr($att['nro'], -1) : ''
+                        )
         );
         return sprintf($linkPattern, $url, $att['nro'], $att['nro']);
     }
