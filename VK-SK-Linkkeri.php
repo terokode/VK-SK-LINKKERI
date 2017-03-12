@@ -17,7 +17,7 @@ function makeLink(&$atts, &$urlPattern, &$linkPattern){
                 (   /**
                      * Virsikirja vaatii 3 numeroisen numeroinnin ja
                      * mahdollisesti myös sävelen kirjaimen
-                    */
+                     */
                     in_array(substr($att['nro'], -1),array('a','b')) ?
                     substr($att['nro'], -1) : ''
                 )
