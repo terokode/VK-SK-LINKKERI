@@ -3,10 +3,10 @@
  * Plugin Name: VK-SK-Linkkeri
  * Plugin URI: https://github.com/terokode/VK-SK-LINKKERI
  * Description: WP-sivuilta linkit helposti Suomen Ev.lut. kirkon virsikirjaan ja Suomen Luterilaisen Evankeliumiyhdistyksen Siionin kanteleeseen
- * Version: 2017-03-11
+ * Version: 2017-03-12
  * Author: Tero Kotti
  * Author URI: http://kotti.fi
- * License: MIT
+ * License: MIT (c) 2014, 2017 Tero Kotti
  */
 
 function makeLink(&$atts, &$urlPattern, &$linkPattern){
