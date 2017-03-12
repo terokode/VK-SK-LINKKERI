@@ -14,10 +14,13 @@ function makeLink(&$atts, &$urlPattern, &$linkPattern){
 
     if (preg_match('/^[0-9]{1,3}[a-b]?$/', $att['nro'])){
         $url = sprintf( $urlPattern, $att['nro'],
-                        (
-                            in_array(substr($att['nro'], -1),array('a','b')) ?
-                            substr($att['nro'], -1) : ''
-                        )
+                (   /**
+                     * Virsikirja vaatii 3 numeroisen numeroinnin ja
+                     * mahdollisesti myös sävelen kirjaimen
+                     */
+                    in_array(substr($att['nro'], -1),array('a','b')) ?
+                    substr($att['nro'], -1) : ''
+                )
         );
         return sprintf($linkPattern, $url, $att['nro'], $att['nro']);
     }
